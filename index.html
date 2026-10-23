@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arts Cleaning — Nettoyage Professionnel & Propreté à Liège</title>
+    <style>
+        :root {
+            --primary-color: #2eb85c;
+            --accent-color: #1b8a3e;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-light: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        .btn-call {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-call:hover {
+            background-color: var(--accent-color);
+        }
+
+        .hero {
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,1) 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .services {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about {
+            background-color: var(--bg-card);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-top: 1px solid #334155;
+            border-bottom: 1px solid #334155;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 1rem auto;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .contact {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contact-box {
+            background-color: var(--bg-card);
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        .contact-phone {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: block;
+            margin: 1rem 0;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid #334155;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Arts <span>Cleaning</span></div>
+        <a href="tel:0491731752" class="btn-call">📞 Appeler</a>
+    </header>
+
+    <section class="hero">
+        <h1>Arts Cleaning — La propreté, notre art.</h1>
+        <p>Service professionnel de nettoyage de surfaces vitrées et d'entretien extérieur dans la région de Liège.</p>
+        <a href="tel:0491731752" class="btn-call" style="padding: 0.8rem 2rem; font-size: 1.1rem;">Demander un devis gratuit</a>
+    </section>
+
+    <section class="services">
+        <h2>Nos Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Lavage de Vitres</h3>
+                <p>Nettoyage impeccable de vos vitres résidentielles et commerciales, châssis et encadrements compris.</p>
+            </div>
+            <div class="card">
+                <h3>Vérandas & Pergolas</h3>
+                <p>Remise en état complète de vos vitrages et structures pour retrouver une clarté optimale.</p>
+            </div>
+            <div class="card">
+                <h3>Toitures</h3>
+                <p>Entretien et nettoyage de vos toitures pour préserver la durabilité de votre bâtiment.</p>
+            </div>
+            <div class="card">
+                <h3>Panneaux Photovoltaïques</h3>
+                <p>Nettoyage spécialisé à l'eau pure pour maximiser le rendement de vos panneaux solaires.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>À Propos d'Arts Cleaning</h2>
+        <p>Fort de 24 ans d'expérience dans le domaine de la propreté, Arts Cleaning met son savoir-faire et sa rigueur au service des particuliers et professionnels de la région de Liège.</p>
+    </section>
+
+    <section class="contact">
+        <h2>Besoin d'un devis ou d'un renseignement ?</h2>
+        <div class="contact-box">
+            <p>Contactez-nous directement par téléphone :</p>
+            <a href="tel:0491731752" class="contact-phone">0491 73 17 52</a>
+            <p style="color: var(--text-muted);">Seraing, Ougrée, Flémalle, Herstal & Région de Liège</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Arts Cleaning. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
