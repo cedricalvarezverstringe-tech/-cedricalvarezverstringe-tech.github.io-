@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arts Cleaning - Nettoyage Professionnel de Vitres à Liège</title>
+  <style>
+    /* RESET & BASE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background-color: #0d1117;
+      color: #f0f6fc;
+      line-height: 1.6;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* BACKGROUND LOGO WATERMARK */
+    .bg-watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vw;
+      max-width: 650px;
+      height: auto;
+      opacity: 0.12;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* HEADER */
+    header {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background: rgba(13, 17, 23, 0.9);
+      border-bottom: 1px solid #21262d;
+      backdrop-filter: blur(8px);
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+    }
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #00ff88;
+      letter-spacing: 1px;
+    }
+    .counter-badge {
+      background: #161b22;
+      border: 1px solid #30363d;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: #8b949e;
+    }
+    .counter-badge strong {
+      color: #00ff88;
+    }
+
+    /* HERO CONTAINER */
+    .main-container {
+      position: relative;
+      z-index: 5;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      color: #8b949e;
+      font-size: 1.1rem;
+    }
+
+    /* CALCULATOR SECTION */
+    .calculator-card {
+      background: rgba(22, 27, 34, 0.85);
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      backdrop-filter: blur(10px);
+    }
+    .calculator-card h2 {
+      color: #00ff88;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid #21262d;
+      padding-bottom: 0.75rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-group label {
+      font-size: 0.9rem;
+      color: #c9d1d9;
+    }
+    .form-group input, .form-group select {
+      background: #0d1117;
+      border: 1px solid #30363d;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus {
+      border-color: #00ff88;
+    }
+
+    /* RESULT & WHATSAPP */
+    .result-box {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: #0d1117;
+      border: 1px solid #00ff88;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .result-price {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #00ff88;
+      margin: 0.5rem 0;
+    }
+    .result-note {
+      font-size: 0.8rem;
+      color: #8b949e;
+      margin-bottom: 1.25rem;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      width: 100%;
+      background: #25D366;
+      color: #000;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 1.05rem;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .btn-whatsapp:hover {
+      background: #20ba5a;
+      transform: translateY(-2px);
+    }
+
+    /* AVIS / REVIEWS SECTION */
+    .reviews-section {
+      margin-top: 3.5rem;
+    }
+    .reviews-section h2 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 1.5rem;
+    }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 600px) {
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .review-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.25rem;
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+    .author {
+      font-weight: bold;
+      color: #00ff88;
+    }
+    .stars {
+      color: #ffb703;
+    }
+    .review-text {
+      font-size: 0.9rem;
+      color: #8b949e;
+    }
+
+    /* FOOTER */
+    footer {
+      position: relative;
+      z-index: 10;
+      margin-top: 4rem;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid #21262d;
+      background: #0d1117;
+      text-align: center;
+      color: #8b949e;
+      font-size: 0.85rem;
+    }
+    footer a {
+      color: #00ff88;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ARRIÈRE-PLAN LOGO WATERMARK -->
+  <svg class="bg-watermark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="90" fill="none" stroke="#00ff88" stroke-width="3" opacity="0.3"/>
+    <path d="M 40,80 L 160,80 L 100,20 Z" fill="none" stroke="#00ff88" stroke-width="4"/>
+    <path d="M 60,110 L 140,110 L 100,160 Z" fill="#00ff88" opacity="0.15"/>
+    <text x="100" y="105" font-family="Arial" font-size="28" font-weight="bold" fill="#00ff88" text-anchor="middle">AC</text>
+    <text x="100" y="140" font-family="Arial" font-size="12" font-weight="bold" fill="#00ff88" letter-spacing="2" text-anchor="middle">ARTS CLEANING</text>
+  </svg>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-container">
+      <svg class="logo-icon" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="45" fill="none" stroke="#00ff88" stroke-width="6"/>
+        <text x="50" y="62" font-family="Arial" font-size="32" font-weight="bold" fill="#00ff88" text-anchor="middle">AC</text>
+      </svg>
+      <div class="logo-text">ARTS CLEANING</div>
+    </div>
+    <div class="counter-badge">
+      Visites : <strong id="visit-count">1</strong>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <div class="main-container">
+    
+    <div class="hero">
+      <h1>Nettoyage de Vitres Professionnel</h1>
+      <p>Région de Liège & environs • Service de qualité garanti</p>
+    </div>
+
+    <!-- CALCULATEUR DE DEVIS -->
+    <div class="calculator-card">
+      <h2>Calculateur de Devis Express</h2>
+      
+      <form id="quote-form" oninput="updateCalculation()">
+        <div class="form-grid">
+          
+          <div class="form-group">
+            <label for="f-standard">Fenêtres standards (1 à 2 vantaux) - 8€</label>
+            <input type="number" id="f-standard" min="0" value="0" data-price="8">
+          </div>
+
+          <div class="form-group">
+            <label for="f-baie">Baies vitrées coulissantes - 15€</label>
+            <input type="number" id="f-baie" min="0" value="0" data-price="15">
+          </div>
+
+          <div class="form-group">
+            <label for="f-porte">Portes-fenêtres - 12€</label>
+            <input type="number" id="f-porte" min="0" value="0" data-price="12">
+          </div>
+
+          <div class="form-group">
+            <label for="f-velux">Fenêtres de toit / Velux - 10€</label>
+            <input type="number" id="f-velux" min="0" value="0" data-price="10">
+          </div>
+
+          <div class="form-group">
+            <label for="f-etage">Vitres à l'étage (accès échelle) - 10€</label>
+            <input type="number" id="f-etage" min="0" value="0" data-price="10">
+          </div>
+
+          <div class="form-group">
+            <label for="f-pv">Panneaux photovoltaïques - 8€</label>
+            <input type="number" id="f-pv" min="0" value="0" data-price="8">
+          </div>
+
+        </div>
+
+        <div class="form-group" style="margin-top: 1.25rem;">
+          <label for="faces">Type de prestation :</label>
+          <select id="faces" onchange="updateCalculation()">
+            <option value="1">Intérieur ET Extérieur (Tarif normal)</option>
+            <option value="0.6">Extérieur uniquement (-40%)</option>
+          </select>
+        </div>
+
+        <!-- RÉSULTAT -->
+        <div class="result-box">
+          <div>Estimation totale :</div>
+          <div class="result-price"><span id="total-price">0.00</span> € HTVA</div>
+          <div class="result-note">* Tarif indicatif sous réserve d'inspection ou précision sur place.</div>
+          
+          <a id="whatsapp-link" href="#" target="_blank" class="btn-whatsapp">
+            Envoyer ma demande par WhatsApp
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <!-- AVIS CLIENTS -->
+    <div class="reviews-section">
+      <h2>Retours & Avis Clients</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <span class="author">Client Vérifié</span>
+            <span class="stars">★★★★★</span>
+          </div>
+          <p class="review-text">"Travail très propre et rapide sur nos baies vitrées. Je recommande vivement Arts Cleaning !"</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <span class="author">Client Vérifié</span>
+            <span class="stars">★★★★★</span>
+          </div>
+          <p class="review-text">"Résultat nickel sur les fenêtres de toit et châssis. Service sérieux et ponctuel."</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Arts Cleaning</strong> — Téléphone : <a href="tel:0491731752">0491 73 17 52</a></p>
+    <p>Facturation gérée via SMART Smart-Coop</p>
+    <p style="margin-top: 0.5rem; opacity: 0.6;">© 2026 Arts Cleaning. Tous droits réservés.</p>
+  </footer>
+
+  <!-- SCRIPT JS -->
+  <script>
+    // 1. Compteur de visites
+    let visits = localStorage.getItem('arts_cleaning_visits') || 142;
+    visits = parseInt(visits) + 1;
+    localStorage.setItem('arts_cleaning_visits', visits);
+    document.getElementById('visit-count').innerText = visits;
+
+    // 2. Calculateur de devis
+    function updateCalculation() {
+      const inputs = document.querySelectorAll('#quote-form input[type="number"]');
+      let subtotal = 0;
+      let totalWindows = 0;
+
+      inputs.forEach(input => {
+        const qty = parseInt(input.value) || 0;
+        const price = parseFloat(input.getAttribute('data-price')) || 0;
+        subtotal += qty * price;
+        if (input.id !== 'f-pv') {
+          totalWindows += qty;
+        }
+      });
+
+      const faceMultiplier = parseFloat(document.getElementById('faces').value) || 1;
+      const finalTotal = subtotal * faceMultiplier;
+
+      // Affichage du total
+      document.getElementById('total-price').innerText = finalTotal.toFixed(2);
+
+      // Lien WhatsApp
+      const phone = "32491731752";
+      const message = `Bonjour Arts Cleaning, je souhaite réserver un nettoyage :%0A- Nombre de fenêtres : ${totalWindows}%0A- Type : ${document.getElementById('faces').options[document.getElementById('faces').selectedIndex].text}%0A- Estimation : ${finalTotal.toFixed(2)}€ HTVA`;
+      
+      document.getElementById('whatsapp-link').href = `https://wa.me/${phone}?text=${message}`;
+    }
+
+    // Initialisation au chargement
+    updateCalculation();
+  </script>
+</body>
+</html>
