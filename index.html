@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arts Cleaning - Your Solution</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+      
+      /* Fond Fibre de Carbone + Effets de Fumée et Vagues Vertes */
+      background-color: #050a05;
+      background-image: 
+        radial-gradient(circle at 50% 50%, rgba(57, 255, 20, 0.35) 0%, rgba(0, 40, 0, 0.8) 50%, #030603 90%),
+        repeating-linear-gradient(45deg, rgba(20, 20, 20, 0.8) 0, rgba(20, 20, 20, 0.8) 2px, rgba(5, 5, 5, 0.9) 0, rgba(5, 5, 5, 0.9) 8px);
+    }
+
+    /* Effet de lueur et lignes de courant vert */
+    body::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 70%, rgba(57, 255, 20, 0.15) 0%, transparent 40%),
+                  radial-gradient(circle at 70% 30%, rgba(57, 255, 20, 0.15) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .main-card {
+      position: relative;
+      max-width: 750px;
+      width: 100%;
+      background: rgba(10, 15, 10, 0.75);
+      border: 2px solid #39ff14;
+      border-radius: 24px;
+      padding: 40px 25px;
+      box-shadow: 
+        0 0 30px rgba(57, 255, 20, 0.4),
+        inset 0 0 20px rgba(57, 255, 20, 0.2);
+      backdrop-filter: blur(8px);
+      z-index: 1;
+    }
+
+    /* Titres façon Néon de l'image */
+    .title-top {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #aaffaa;
+      text-shadow: 
+        0 0 8px #39ff14,
+        0 0 18px #39ff14,
+        0 0 35px #00ff00;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .logo-container {
+      margin: 15px 0;
+    }
+
+    .logo-img {
+      width: 140px;
+      max-width: 80%;
+      filter: drop-shadow(0 0 12px #39ff14);
+    }
+
+    .title-middle {
+      font-family: 'Cinzel', serif;
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: #aaffaa;
+      text-shadow: 
+        0 0 8px #39ff14,
+        0 0 18px #39ff14,
+        0 0 35px #00ff00;
+      line-height: 1;
+    }
+
+    .title-bottom {
+      font-family: 'Cinzel', serif;
+      font-size: 4.2rem;
+      font-weight: 800;
+      color: #aaffaa;
+      text-shadow: 
+        0 0 10px #39ff14,
+        0 0 25px #39ff14,
+        0 0 45px #00ff00;
+      line-height: 1;
+      margin-bottom: 30px;
+    }
+
+    /* Sections / Menus (Compteur & Gmail) */
+    .menu-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    /* Compteur de passage */
+    .counter-box {
+      background: rgba(0, 0, 0, 0.85);
+      border: 1.5px solid #39ff14;
+      border-radius: 16px;
+      padding: 15px 30px;
+      box-shadow: 0 0 15px rgba(57, 255, 20, 0.3);
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .counter-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #39ff14;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .counter-value {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #ffffff;
+      font-family: monospace;
+      text-shadow: 0 0 12px #39ff14;
+    }
+
+    /* Bouton Gmail */
+    .gmail-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      max-width: 380px;
+      padding: 16px 25px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #000000;
+      background: #39ff14;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 0 25px rgba(57, 255, 20, 0.7);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .gmail-btn:hover {
+      background: #ffffff;
+      box-shadow: 0 0 35px rgba(255, 255, 255, 0.9);
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    @media (max-width: 600px) {
+      .title-top { font-size: 2.2rem; }
+      .title-middle { font-size: 2.5rem; }
+      .title-bottom { font-size: 2.8rem; }
+      .main-card { padding: 30px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-card">
+    <!-- En-tête / Texte identique à la carte -->
+    <div class="title-top">Arts cleaning</div>
+    
+    <!-- Raclettes SVG croisées (comme sur l'image) -->
+    <div class="logo-container">
+      <svg class="logo-img" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 30 L50 50 L80 30" stroke="#39ff14" stroke-width="6" stroke-linecap="round"/>
+        <path d="M15 25 L50 48 L85 25" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M50 50 L50 85" stroke="#39ff14" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="50" cy="35" r="4" fill="#39ff14"/>
+      </svg>
+    </div>
+
+    <div class="title-middle">Your</div>
+    <div class="title-bottom">Solution</div>
+
+    <!-- Menus (Compteur de visites + Contact Gmail) -->
+    <div class="menu-section">
+      
+      <!-- Compteur -->
+      <div class="counter-box">
+        <div class="counter-title">Compteur de passages</div>
+        <div class="counter-value" id="visitCount">0</div>
+      </div>
+
+      <!-- Bouton Contact -->
+      <a class="gmail-btn" href="mailto:artscleaning.contact@gmail.com">
+        ✉️ Contactez-nous par Gmail
+      </a>
+
+    </div>
+  </div>
+
+  <script>
+    // Gestion du compteur de passage
+    function registerVisit() {
+      let count = localStorage.getItem('arts_cleaning_visits');
+      if (!count) {
+        count = 1;
+      } else {
+        count = parseInt(count) + 1;
+      }
+      localStorage.setItem('arts_cleaning_visits', count);
+      document.getElementById('visitCount').innerText = count;
+    }
+
+    registerVisit();
+  </script>
+</body>
+</html>
