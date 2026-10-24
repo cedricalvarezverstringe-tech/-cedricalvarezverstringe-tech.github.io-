@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arts Cleaning - Your Solution</title>
+  
+  <!-- Polices Google Fonts pour correspondre au style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      
+      /* Arrière-plan sombre avec effet de halo/luminescence verte */
+      background: 
+        radial-gradient(circle at center, rgba(57, 255, 20, 0.25) 0%, rgba(10, 25, 10, 0.85) 55%, #050a05 100%),
+        repeating-linear-gradient(45deg, #111 0, #111 2px, #080808 0, #080808 50%);
+      background-blend-mode: screen, normal;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.65);
+      border: 2px solid rgba(57, 255, 20, 0.4);
+      border-radius: 20px;
+      padding: 40px 20px;
+      box-shadow: 0 0 35px rgba(57, 255, 20, 0.25);
+      backdrop-filter: blur(5px);
+    }
+
+    /* Style du titre façon Néon Vert */
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #88ff88;
+      text-shadow: 
+        0 0 5px #39ff14,
+        0 0 10px #39ff14,
+        0 0 20px #39ff14,
+        0 0 40px #00ff00,
+        0 0 80px #00ff00;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      text-transform: capitalize;
+    }
+
+    .brand-subtitle {
+      display: block;
+      font-size: 2.8rem;
+      margin-top: 10px;
+      color: #a3ffa3;
+    }
+
+    /* Section Compteur */
+    .counter-card {
+      margin: 35px auto 25px;
+      padding: 15px 25px;
+      background: rgba(10, 20, 10, 0.8);
+      border: 1px solid #39ff14;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+    }
+
+    .counter-label {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #a0ffa0;
+      margin-bottom: 8px;
+    }
+
+    .counter-number {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-shadow: 0 0 12px #39ff14;
+      font-family: monospace;
+    }
+
+    /* Section Contact / Gmail */
+    .contact-box {
+      margin-top: 30px;
+    }
+
+    .email-link {cedricalvarezverstringe@gmail.com
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 28px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #000000;
+      background-color: #39ff14;
+      text-decoration: none;
+      border-radius: 30px;
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    .email-link:hover {
+      background-color: #ffffff;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .brand-title { font-size: 2.1rem; }
+      .brand-subtitle { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- En-tête avec typographie néon vert -->
+    <h1 class="brand-title">
+      Arts cleaning
+      <span class="brand-subtitle">Your Solution</span>
+    </h1>
+
+    <!-- Compteur de visites -->
+    <div class="counter-card">
+      <div class="counter-label">Nombre de visites</div>
+      <div class="counter-number" id="visitCount">0</div>
+    </div>
+
+    <!-- Contact Gmail -->
+    <div class="contact-box">
+      <p style="margin-bottom: 10px; color: #ccc;">Pour toute demande ou devis :</p>
+      <!-- Remplacez l'adresse ci-dessous par votre adresse Gmail exacte si besoin -->
+      <a class="email-link" href="mailto:artscleaning.contact@gmail.com">
+        ✉️ Nous contacter par Gmail
+      </a>
+    </div>
+  </div>
+
+  <!-- Script du compteur -->
+  <script>
+    function updateCounter() {
+      let visits = localStorage.getItem('site_visits');
+      if (!visits) {
+        visits = 1;
+      } else {
+        visits = parseInt(visits) + 1;
+      }
+      localStorage.setItem('site_visits', visits);
+      document.getElementById('visitCount').innerText = visits;
+    }
+
+    updateCounter();
+  </script>
+</body>
+</html>
